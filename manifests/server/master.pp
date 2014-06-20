@@ -33,7 +33,10 @@
 #  [cnconfig_attrs]
 #    Default cn=config attributes that needs to be changed
 #    upon runs
-#    *Optional* (defaults to {})
+#    Used as an array of hashes, so it can be used to make
+#    multiple instances of a single configuration option
+#    (like 'olcAuthzRegexp')
+#    *Optional* (defaults to [])
 #
 #  [log_level]
 #
@@ -126,7 +129,7 @@ class ldap::server::master(
   $schema_inc          = [],
   $modules_inc         = [],
   $index_inc           = [],
-  $cnconfig_attrs      = {},
+  $cnconfig_attrs      = [],
   $log_level           = '0',
   $bind_anon           = true,
   $ssl                 = false,
