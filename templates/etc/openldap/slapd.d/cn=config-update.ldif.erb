@@ -1,7 +1,7 @@
 dn: cn=config
 changetype: modify
 <% @cnconfig_attrs.each do |hash| -%>
-<% @hash.each_pair do |key, value| -%>
+<% hash.each_pair do |key, value| -%>
 <% if value != '' and @cnconfig_default_attrs.include?(key) -%>
 replace: <%= key %>
 <%= key %>: <%= value %>
