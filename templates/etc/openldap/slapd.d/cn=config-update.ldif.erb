@@ -6,7 +6,7 @@ changetype: modify
 replace: <%= key %>
 <%= key %>: <%= value %>
 -
-<% elsif @hash.include?(key) and value == '' -%>
+<% elsif hash.include?(key) and value == '' -%>
 delete: <%= key %>
 -
 <% else -%>
