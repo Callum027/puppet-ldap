@@ -17,8 +17,8 @@ class ldap::params {
       $server_pattern  = 'slapd'
       $server_package  = [ 'slapd' ]
       $server_config   = 'slapd.conf'
-      $server_owner    = 'openldap'
-      $server_group    = 'openldap'
+      $server_owner    = 'root'
+      $server_group    = 'root'
       $db_prefix       = '/var/lib/ldap'
       $ssl_prefix      = '/etc/ssl/certs'
       $server_run      = '/var/run/slapd'
