@@ -1,5 +1,7 @@
 dn: cn=config
 changetype: modify
+<% oldkey = '' -%>
+<% oldvalue = '' -%>
 <% @cnconfig_attrs.each do |hash| -%>
 <% hash.each_pair do |key, value| -%>
 <% if key == oldkey -%>
